@@ -1,3 +1,15 @@
+body {
+  font-size: 20px;
+  color: #31352b;
+  font-family: "Rubik", sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -64,4 +76,25 @@ button {
   padding: 0;
   cursor: pointer;
   outline: transparent;
+}
+
+.header {
+  padding: 60px 0;
+}
+.header__menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu__list {
+  display: flex;
+}
+
+.menu__link:not(:last-child) {
+  margin-right: 45px;
+}
+
+.menu__nav {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */
