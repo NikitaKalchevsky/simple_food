@@ -1643,10 +1643,18 @@ body {
 .footer__item--contact {
   margin-bottom: 15px;
   text-align: left;
+  transition: color 0.4s linear;
+}
+.footer__item--contact:hover {
+  color: #ff6838;
 }
 .footer__item--link {
   text-align: left;
   font-size: 18px;
+  transition: color 0.4s linear;
+}
+.footer__item--link:hover {
+  color: #ff6838;
 }
 .footer__item--link:not(:last-child) {
   margin-bottom: 20px;
