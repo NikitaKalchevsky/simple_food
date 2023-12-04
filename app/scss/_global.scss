@@ -21,11 +21,12 @@ body {
 
 .container {
   max-width: 1200px;
-  padding: 0 15px 120px;
+  padding: 0 15px;
   margin: 0 auto;
-  // background: #f9faff;
 }
-
+.section {
+  padding-bottom: 120px;
+}
 .button--active {
   background-color: $orange-900;
   padding: 12px 32px;

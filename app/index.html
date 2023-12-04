@@ -8,88 +8,88 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="css/style.min.css">
 
 </head>
 
 <body>
   <header class="header">
-    <div class="container">
-      <nav class="header__wrapper" id="header__wrapper">
-        <a class="logo" href="#">
-          <svg class="logo__img">
-            <use xlink:href="images/stack/sprite.svg#Logo"></use>
-          </svg>
-        </a>
 
-        <menu class="header__menu">
-          <ul class="menu__list">
-            <li class="menu__item">
-              <a class="menu__link menu__link--active" href="#">
-                Главная
-              </a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">
-                Блюда
-              </a>
-            </li>
-            <li class="menu__item">
-              <a class="menu__link" href="#">
-                Контакты
-              </a>
-            </li>
-          </ul>
+    <div class="container header__container" id="navbar">
+      <a class="logo" href="#">
+        <svg class="logo__img">
+          <use xlink:href="images/stack/sprite.svg#Logo"></use>
+        </svg>
+      </a>
 
-          <ul class="nav">
-            <li class="nav__items">
-              <button class="nav__link" href="#" stroke="#fff">
-                <svg class="nav__link--img">
-                  <use xlink:href="images/stack/sprite.svg#Search"></use>
-                </svg>
-              </button>
-            </li>
-            <li class="nav__items">
-              <button class="nav__link" href="#">
-                <svg class="nav__link--img">
-                  <use xlink:href="images/stack/sprite.svg#Carticon"></use>
-                </svg>
-                <span class="nav__link--num">4</span>
-              </button>
-            </li>
-          </ul>
-        </menu>
+      <nav class="header__menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link menu__link--active" href="#">
+              Главная
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">
+              Блюда
+            </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">
+              Контакты
+            </a>
+          </li>
+        </ul>
 
+        <ul class="nav">
+          <li class="nav__items">
+            <button class="nav__link" href="#" stroke="#fff">
+              <svg class="nav__link--img">
+                <use xlink:href="images/stack/sprite.svg#Search"></use>
+              </svg>
+            </button>
+          </li>
+          <li class="nav__items">
+            <button class="nav__link" href="#">
+              <svg class="nav__link--img">
+                <use xlink:href="images/stack/sprite.svg#Carticon"></use>
+              </svg>
+              <span class="nav__link--num">4</span>
+            </button>
+          </li>
+        </ul>
       </nav>
-      <div class="content">
-        <div class="content__inner">
-          <h1 class="content__title">
-            Доставка
-            <span class="content__subtitle">
-              за 15 минут
-            </span>
-          </h1>
-          <p class="content__text">
-            Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
-          </p>
-          <div class="content__button">
-            <button class="button--active" type="button">
-              Заказать
-            </button>
-            <button class="button button__secondary" type="button">
-              Подробнее
-            </button>
-          </div>
-        </div>
-        <img class="content__image" src="images/Scooter_Guy.jpg" alt="фото доставщика">
-      </div>
 
     </div>
+
   </header>
 
-  <main class="main">
-    <section class="product">
+  <main class="main ">
+    <section class="content container section">
+      <div class="content__inner">
+        <h1 class="content__title">
+          Доставка
+          <span class="content__subtitle">
+            за 15 минут
+          </span>
+        </h1>
+        <p class="content__text">
+          Самый быстрый сервис доставки еды в вашем городе. Не уложимся в срок - доставка за наш счёт
+        </p>
+        <div class="content__button">
+          <button class="button--active" type="button">
+            Заказать
+          </button>
+          <button class="button button__secondary" type="button">
+            Подробнее
+          </button>
+        </div>
+      </div>
+      <img class="content__image" src="images/Scooter_Guy.jpg" alt="фото доставщика">
+    </section>
+
+    <section class="product section">
       <div class="container">
         <h2 class="title product__title">
           Популярные категории
@@ -110,7 +110,7 @@
               <svg class="categories__img">
                 <use xlink:href="images/stack/sprite.svg#pizza"></use>
               </svg>
-              пицца
+              Пицца
             </button>
           </li>
           <li class="categories__item">
@@ -272,7 +272,7 @@
       </div>
     </section>
 
-    <section class="info">
+    <section class="info section">
       <div class="container">
         <div class="info__box">
           <img class="info__photo" alt="фото доставщика" src="images/food_delivery.jpg">
@@ -280,7 +280,7 @@
           <div class="features">
             <h2 class="title features__title">
               Оставайтесь дома,
-              а мы позаботимся о еде
+              <span class="features__subtitle">а мы позаботимся о еде</span>
             </h2>
             <h3 class="subtitle">
               У нас есть вкусная еда и мы готовы доставить её к вам домой! Воспользуйтесь нашей доставкой прямо сейчас и
@@ -301,7 +301,7 @@
       </div>
     </section>
 
-    <section class="restaurants">
+    <section class="restaurants section">
       <div class="container">
         <h2 class="title restaurants__title">
           Лучшие рестораны
@@ -313,8 +313,9 @@
               Blaze Pizza
             </h3>
             <div class="restaurants__item--inner">
+              <img class="restaurants__item--timer" src="images/timer.svg" alt="">
               <h4 class="restaurants__item--time">
-                06:00 - 23:00
+                11:00 - 22:00
               </h4>
               <button class="restaurants__item--go">
                 <svg class="restaurants__item--arrow">
@@ -331,6 +332,7 @@
               Pizza Runcho
             </h3>
             <div class="restaurants__item--inner">
+              <img class="restaurants__item--timer" src="images/timer.svg" alt="">
               <h4 class="restaurants__item--time">
                 12:00 - 21:00
               </h4>
@@ -348,6 +350,7 @@
               Pizza Hut
             </h3>
             <div class="restaurants__item--inner">
+              <img class="restaurants__item--timer" src="images/timer.svg" alt="">
               <h4 class="restaurants__item--time">
                 06:00 - 23:00
               </h4>
@@ -365,6 +368,7 @@
               McDonald`s
             </h3>
             <div class="restaurants__item--inner">
+              <img class="restaurants__item--timer" src="images/timer.svg" alt="">
               <h4 class="restaurants__item--time">
                 06:00 - 23:30
               </h4>
@@ -382,8 +386,9 @@
               KFC
             </h3>
             <div class="restaurants__item--inner">
+              <img class="restaurants__item--timer" src="images/timer.svg" alt="">
               <h4 class="restaurants__item--time">
-                09:00 - 21:00
+                06:00 - 23:30
               </h4>
               <button class="restaurants__item--go">
                 <svg class="restaurants__item--arrow">
@@ -399,8 +404,9 @@
               Star Burgers
             </h3>
             <div class="restaurants__item--inner">
+              <img class="restaurants__item--timer" src="images/timer.svg" alt="">
               <h4 class="restaurants__item--time">
-                06:00 - 23:00
+                09:00 - 21:00
               </h4>
               <button class="restaurants__item--go">
                 <svg class="restaurants__item--arrow">
@@ -414,104 +420,119 @@
       </div>
 
     </section>
-    <section class="comment">
+    <section class="comment section">
       <div class="container">
         <h2 class="title comment__title">
           Отзывы клиентов
         </h2>
 
-        <div class="comment__slider">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="comment__box">
+                <img class="comment__img" src="images/client.jpg" alt="фото клиента">
+                <blockquote class="comment__inner">
 
-          <div class="comment__box">
-            <img class="comment__img" src="images/client.jpg" alt="фото клиента">
-            <blockquote class="comment__inner">
+                  <h3 class="comment__feedback">
+                    SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
+                    приложение. Их
+                    доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки на доставку -
+                    однозначно
+                    рекомендую!
+                  </h3>
+                  <p class="comment__name">
+                    Дарья
+                  </p>
+                  <p class="comment__text">
+                    Ценитель вкусной еды
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="comment__box">
+                <img class="comment__img" src="images/client.jpg" alt="фото клиента">
+                <blockquote class="comment__inner">
 
-              <h3 class="comment__feedback">
-                SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
-                приложение. Их
-                доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки на доставку -
-                однозначно
-                рекомендую!
-              </h3>
-              <p class="comment__name">
-                Дарья
-              </p>
-              <p class="comment__text">
-                Ценитель вкусной еды
-              </p>
-            </blockquote>
+                  <h3 class="comment__feedback">
+                    SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
+                    приложение. Их
+                    доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки на доставку -
+                    однозначно
+                    рекомендую!
+                  </h3>
+                  <p class="comment__name">
+                    Дарья
+                  </p>
+                  <p class="comment__text">
+                    Ценитель вкусной еды
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="comment__box">
+                <img class="comment__img" src="images/client.jpg" alt="фото клиента">
+                <blockquote class="comment__inner">
+
+                  <h3 class="comment__feedback">
+                    SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
+                    приложение. Их
+                    доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки на доставку -
+                    однозначно
+                    рекомендую!
+                  </h3>
+                  <p class="comment__name">
+                    Дарья
+                  </p>
+                  <p class="comment__text">
+                    Ценитель вкусной еды
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="comment__box">
+                <img class="comment__img" src="images/client.jpg" alt="фото клиента">
+                <blockquote class="comment__inner">
+
+                  <h3 class="comment__feedback">
+                    SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
+                    приложение. Их
+                    доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки на доставку -
+                    однозначно
+                    рекомендую!
+                  </h3>
+                  <p class="comment__name">
+                    Дарья
+                  </p>
+                  <p class="comment__text">
+                    Ценитель вкусной еды
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+            ....
           </div>
 
-          <div class="comment__box">
-            <img class="comment__img" src="images/client.jpg" alt="фото клиента">
-            <blockquote class="comment__inner">
+          <div class="swiper-pagination"></div>
 
-              <h3 class="comment__feedback">
-                SimpleFood - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
-                приложение. Их
-                доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки на доставку -
-                однозначно
-                рекомендую!
-              </h3>
-              <p class="comment__name">
-                Дарья
-              </p>
-              <p class="comment__text">
-                Ценитель вкусной еды
-              </p>
-            </blockquote>
+
+          <div class="myslider-prev swiper-button-prev">
+            <img src="images/ico/prev_arrow.svg" alt="">
+          </div>
+          <div class="myslider-next swiper-button-next">
+            <img src="images/ico/next_arrow.svg" alt="">
           </div>
 
-          <div class="comment__box">
-            <img class="comment__img" src="images/client.jpg" alt="фото клиента">
-            <blockquote class="comment__inner">
-
-              <h3 class="comment__feedback">
-                macdonalds - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
-                приложение. Их
-                доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки на доставку -
-                однозначно
-                рекомендую!
-              </h3>
-              <p class="comment__name">
-                Дарья
-              </p>
-              <p class="comment__text">
-                Ценитель вкусной еды
-              </p>
-            </blockquote>
-          </div>
-
-
-          <div class="comment__box">
-            <img class="comment__img" src="images/client.jpg" alt="фото клиента">
-            <blockquote class="comment__inner">
-
-              <h3 class="comment__feedback">
-                KFC - одна из лучших служб доставки продуктов из ресторанов в городе. Очень удобный сайт и
-                приложение. Их
-                доставщики очень вежливы и пунктуальны. Компания часто проводит акции и дарит скидки на доставку -
-                однозначно
-                рекомендую!
-              </h3>
-              <p class="comment__name">
-                Дарья
-              </p>
-              <p class="comment__text">
-                Ценитель вкусной еды
-              </p>
-            </blockquote>
-
-          </div>
-
-
+          <div class="swiper-scrollbar"></div>
         </div>
 
 
       </div>
     </section>
 
-    <section class="connect">
+    <section class="connect section">
       <div class="container">
         <div class="connect__box">
 
@@ -688,6 +709,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <script src="js/mixitup.min.js"></script>
   <script src="js/jquery.fancybox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 

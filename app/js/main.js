@@ -1,21 +1,32 @@
 $(function () {
-  $(".comment__slider").slick({
-    dots: true,
-    fade: true,
-    appendArrows: $(".comment__box"),
-  });
+  var mixer = mixitup(".categories");
 });
 
-function svgSprites() {
-  return src("images/ico/*.svg")
-    .pipe(
-      svgSprite({
-        mode: {
-          stack: {
-            sprite: "app/images/sprite.svg",
-          },
-        },
-      })
-    )
-    .pipe(dest("app/images/ico"));
-}
+new Swiper(".swiper", {
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  scrollbar: false,
+
+  navigation: {
+    nextEl: ".myslider-next",
+    prevEl: ".myslider-prev",
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: true,
+    pageUpDown: true,
+  },
+});
+const headerEl = document.getElementById("navbar");
+
+window.addEventListener("scroll", function () {
+  const scrollPos = window.scrollY;
+
+  if (scrollPos > 100) {
+    headerEl.classList.add("header_mini");
+  } else {
+    headerEl.classList.remove("header_mini");
+  }
+});
