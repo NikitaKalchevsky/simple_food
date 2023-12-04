@@ -44,3 +44,17 @@ function activateButton(index) {
     }
   }
 }
+
+var links = document
+  .getElementsByClassName("menu__list")[0]
+  .getElementsByTagName("a");
+
+function activateLink(index) {
+  for (var i = 0; i < links.length; i++) {
+    if (i === index) {
+      links[i].classList.add("active");
+    } else {
+      links[i].classList.remove("active");
+    }
+  }
+}

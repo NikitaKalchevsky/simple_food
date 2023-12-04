@@ -27,20 +27,20 @@
         </svg>
       </a>
 
-      <nav class="header__menu">
+      <nav class="menu">
         <ul class="menu__list">
           <li class="menu__item">
-            <a class="menu__link menu__link--active" href="#">
+            <a class="menu__link active" href="#" onclick="activateLink(0)">
               Главная
             </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">
+            <a class="menu__link" href="#" onclick="activateLink(1)">
               Блюда
             </a>
           </li>
           <li class="menu__item">
-            <a class="menu__link" href="#">
+            <a class="menu__link" href="#" onclick="activateLink(2)">
               Контакты
             </a>
           </li>
@@ -101,7 +101,7 @@
 
         <ul class="categories">
           <li class="categories__item">
-            <button class="categories__btn" onclick="activateButton(0)" type="button">
+            <button class="categories__btn active" onclick="activateButton(0)" type="button">
               <svg class="categories__img">
                 <use xlink:href="images/stack/sprite.svg#burgerwhite"></use>
               </svg>
