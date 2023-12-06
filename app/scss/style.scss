@@ -401,6 +401,9 @@ body {
       &:hover::before {
         filter: $orange-btn;
       }
+      &:focus::before {
+        filter: $orange-btn;
+      }
       &:active::before {
         filter: $orange-btn;
       }
@@ -411,20 +414,21 @@ body {
         box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7),
           0 5px 12px 0 rgba(255, 104, 56, 0.2);
       }
+      &:focus {
+        justify-content: center;
+        background-color: #fff2ed;
+        border-radius: 20px;
+        box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7),
+          0 5px 12px 0 rgba(255, 104, 56, 0.2);
+      }
       &:active {
         justify-content: center;
         background-color: #fff2ed;
       }
     }
-    &--arrow {
-      width: 24px;
-      height: 24px;
-      &:hover {
-        filter: $orange-btn;
-      }
-    }
   }
 }
+
 .myslider-prev {
   width: 34px;
   height: 34px;
