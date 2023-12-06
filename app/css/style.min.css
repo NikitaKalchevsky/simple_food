@@ -1217,6 +1217,7 @@ body {
   font-size: 18px;
   letter-spacing: 0.54px;
   transition: all 0.4s;
+  filter: #fff;
 }
 
 .categories {
@@ -1231,6 +1232,7 @@ body {
   padding: 13px 32px;
   border-radius: 5px;
   font-size: 20px;
+  transition: filter 0.4s;
 }
 .categories__btn:hover {
   border-radius: 5px;
@@ -1246,12 +1248,12 @@ body {
   border-radius: 5px;
   box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
 }
-.categories__img {
+.categories__btn--img {
   margin-right: 10px;
   width: 44px;
   height: 44px;
 }
-.categories__img:hover {
+.categories__btn--img:hover {
   filter: invert(61%) sepia(34%) saturate(6424%) hue-rotate(336deg) brightness(100%) contrast(104%);
 }
 .categories__item:not(:last-child) {
@@ -1424,11 +1426,27 @@ body {
   height: 33px;
   border-radius: 20px;
 }
+.restaurants__item--go::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-image: url("../images/stack/sprite.svg#arrow_right");
+}
+.restaurants__item--go:hover::before {
+  filter: invert(61%) sepia(34%) saturate(6424%) hue-rotate(336deg) brightness(100%) contrast(104%);
+}
+.restaurants__item--go:active::before {
+  filter: invert(61%) sepia(34%) saturate(6424%) hue-rotate(336deg) brightness(100%) contrast(104%);
+}
 .restaurants__item--go:hover {
   justify-content: end;
   background-color: #ffffff;
   border-radius: 20px;
   box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7), 0 5px 12px 0 rgba(255, 104, 56, 0.2);
+}
+.restaurants__item--go:active {
+  justify-content: center;
+  background-color: #fff2ed;
 }
 .restaurants__item--arrow {
   width: 24px;

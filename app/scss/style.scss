@@ -172,7 +172,10 @@ body {
   font-size: 18px;
   letter-spacing: 0.54px;
   transition: all 0.4s;
+
+  filter: #fff;
 }
+
 .categories {
   display: flex;
   justify-content: left;
@@ -185,6 +188,7 @@ body {
     padding: 13px 32px;
     border-radius: 5px;
     font-size: 20px;
+    transition: filter 0.4s;
     &:hover {
       border-radius: 5px;
       background-color: rgba(255, 122, 80, 0.1);
@@ -201,15 +205,17 @@ body {
 
       box-shadow: 0px 0px 0px 2px rgba(255, 104, 56, 0.7);
     }
-  }
-  &__img {
-    margin-right: 10px;
-    width: 44px;
-    height: 44px;
-    &:hover {
-      filter: $orange-btn;
+
+    &--img {
+      margin-right: 10px;
+      width: 44px;
+      height: 44px;
+      &:hover {
+        filter: $orange-btn;
+      }
     }
   }
+
   &__item:not(:last-child) {
     margin-right: 20px;
   }
@@ -234,7 +240,6 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     padding: 20px 0;
     &:hover {
       border-radius: 5px;
@@ -386,12 +391,29 @@ body {
       width: 79px;
       height: 33px;
       border-radius: 20px;
+
+      &::before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        background-image: url("../images/stack/sprite.svg#arrow_right");
+      }
+      &:hover::before {
+        filter: $orange-btn;
+      }
+      &:active::before {
+        filter: $orange-btn;
+      }
       &:hover {
         justify-content: end;
         background-color: $white;
         border-radius: 20px;
         box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7),
           0 5px 12px 0 rgba(255, 104, 56, 0.2);
+      }
+      &:active {
+        justify-content: center;
+        background-color: #fff2ed;
       }
     }
     &--arrow {
