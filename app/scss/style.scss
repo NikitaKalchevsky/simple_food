@@ -638,7 +638,6 @@
   }
 
   &__feedback {
-
     padding: 0 40px;
     position: relative;
     max-width: 570px;
@@ -673,14 +672,14 @@
   }
 
   &__name {
-
+    padding: 0 40px;
     color: $orange-900;
     margin-bottom: 15px;
     font-weight: 500;
   }
 
   &__text {
-
+    padding: 0 40px;
     font-size: 14px;
   }
 }

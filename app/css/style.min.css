@@ -775,11 +775,13 @@ body {
   left: 0;
 }
 .reviews__name {
+  padding: 0 40px;
   color: #ff6838;
   margin-bottom: 15px;
   font-weight: 500;
 }
 .reviews__text {
+  padding: 0 40px;
   font-size: 14px;
 }
 
