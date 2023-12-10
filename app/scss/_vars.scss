@@ -1,4 +1,6 @@
 $orange-900: #ff6838;
+$orange-400: #fff2ed;
+
 $default-color: #31352b;
 $title-color: #363853;
 $dark: #31352b;
@@ -7,22 +9,28 @@ $silver-200: #ececec;
 $white: #ffffff;
 $silver-100: #f9faff;
 
-$orange-btn: invert(61%) sepia(34%) saturate(6424%) hue-rotate(336deg)
-  brightness(100%) contrast(104%);
+$orange-btn: invert(61%) sepia(34%) saturate(6424%) hue-rotate(336deg) brightness(100%) contrast(104%);
 
-%rubik-italic-400 {
-  font-family: "Rubik-Italic", sans-serif;
+$dark-filter: invert(15%) sepia(36%) saturate(222%) hue-rotate(42deg) brightness(100%) contrast(89%);
+
+$white-filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(97deg) brightness(102%) contrast(107%);
+
+%rubik {
+  font-family: "Rubik", sans-serif;
   font-weight: 400;
 }
-%rubik-400 {
-  font-family: "Rubik-Regular", sans-serif;
+
+%rubik {
+  font-family: "Rubik", sans-serif;
   font-weight: 400;
 }
-%rubik-300 {
-  font-family: "Rubik-Light", sans-serif;
+
+%rubik {
+  font-family: "Rubik", sans-serif;
   font-weight: 300;
 }
-%rubik-500 {
-  font-family: "Rubik-Medium", sans-serif;
+
+%rubik {
+  font-family: "Rubik", sans-serif;
   font-weight: 500;
 }

@@ -1,7 +1,3 @@
-$(function () {
-  var mixer = mixitup(".categories");
-});
-
 new Swiper(".swiper", {
   pagination: {
     el: ".swiper-pagination",
@@ -31,20 +27,6 @@ window.addEventListener("scroll", function () {
   }
 });
 
-var buttons = document
-  .getElementsByClassName("categories")[0]
-  .getElementsByTagName("button");
-
-function activateButton(index) {
-  for (var i = 0; i < buttons.length; i++) {
-    if (i === index) {
-      buttons[i].classList.add("active");
-    } else {
-      buttons[i].classList.remove("active");
-    }
-  }
-}
-
 var links = document
   .getElementsByClassName("menu__list")[0]
   .getElementsByTagName("a");
@@ -58,3 +40,8 @@ function activateLink(index) {
     }
   }
 }
+
+var mixer = mixitup(".categories");
+// $(function () {
+//   var mixer = mixitup(".works__content");
+// });
