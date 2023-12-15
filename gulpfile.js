@@ -6,6 +6,7 @@ const uglify = require("gulp-uglify-es").default;
 const cheerio = require("gulp-cheerio");
 const replace = require("gulp-replace");
 const imagemin = require("gulp-imagemin");
+const fileInclude = require("gulp-file-include");
 const del = require("del");
 const browserSync = require("browser-sync").create();
 const autoprefixer = require("gulp-autoprefixer");
@@ -23,6 +24,18 @@ function scripts() {
     .pipe(dest("app/js"))
     .pipe(browserSync.stream());
 }
+
+const htmlInclude = () => {
+  return src(["app/html/*.html"])
+    .pipe(
+      fileInclude({
+        prefix: "@",
+        basepath: "@file",
+      })
+    )
+    .pipe(dest("dist")) // указываем, в какую папку поместить готовый файл html
+    .pipe(browserSync.stream());
+};
 
 function svgSprites() {
   return src("app/images/ico/*.svg")
@@ -90,6 +103,7 @@ function watching() {
     },
     notify: false,
   });
+  watch(["app/html/**/*.html"], htmlInclude);
   watch(["app/scss/**/*.scss"], styles);
   watch(["app/images/ico/*.svg"], svgSprites);
   watch(["app/js/**/*.js", "!app/js/main.min.js"], scripts);
@@ -98,6 +112,7 @@ function watching() {
 
 function browsersync() {}
 
+exports.htmlInclude = htmlInclude;
 exports.svgSprites = svgSprites;
 exports.styles = styles;
 exports.scripts = scripts;
@@ -108,6 +123,7 @@ exports.cleanDist = cleanDist;
 
 exports.build = series(cleanDist, building, images);
 exports.default = parallel(
+  htmlInclude,
   svgSprites,
   styles,
   scripts,

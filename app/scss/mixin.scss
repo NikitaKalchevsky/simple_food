@@ -47,6 +47,7 @@ $breakpoints: ("phone": 560px,
   padding: 15px;
 }
 
+// обрезание текста
 @mixin line-clamp($lines: 1) {
   @if $lines <=1 {
     overflow: hidden;

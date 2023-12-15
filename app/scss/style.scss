@@ -6,6 +6,7 @@
 @import "global";
 
 .header {
+
   position: fixed;
   top: 0;
   left: 0;
@@ -38,7 +39,7 @@
   }
 
   &:focus {
-    border-color: $orange-900;
+    border-color: var(--orange900);
   }
 
   &:active {
@@ -124,7 +125,7 @@
     }
 
     &:hover {
-      background-color: $orange-900;
+      background-color: var(--orange900);
 
 
       svg {
@@ -133,13 +134,13 @@
 
       span {
         background-color: $white;
-        color: $orange-900;
+        color: var(--orange900);
       }
     }
 
     &:focus {
       background-color: $orange-400;
-      outline-color: $orange-900;
+      outline-color: var(--orange900);
 
       svg {
         stroke: $dark;
@@ -155,7 +156,7 @@
       }
 
       span {
-        background-color: $orange-900;
+        background-color: var(--orange900);
         color: $white;
       }
     }
@@ -164,7 +165,7 @@
       position: absolute;
       padding: 0px 4px 0px 4px;
       border-radius: 50%;
-      background-color: $orange-900;
+      background-color: var(--orange900);
       color: $white;
       font-size: 10px;
       line-height: 15px;
@@ -194,7 +195,7 @@
   }
 
   &__subtitle {
-    color: $orange-900;
+    color: var(--orange900);
     display: block;
   }
 
@@ -227,7 +228,7 @@
 }
 
 .categories button.active {
-  background-color: $orange-900;
+  background-color: var(--orange900);
   padding: 12px 32px;
   color: $white;
   border-radius: 6px;
@@ -256,7 +257,7 @@
     &:hover {
       background-color: rgba(255, 122, 80, 0.1);
       box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
-      color: $orange-900;
+      color: var(--orange900);
 
       svg {
         filter: $orange-btn;
@@ -292,7 +293,7 @@
 
 .mixitup-control-active {
   color: $white;
-  background-color: $orange-900;
+  background-color: var(--orange900);
 
   svg {
     filter: $white-filter;
@@ -323,7 +324,7 @@
     transition: box-shadow 0.4s ease-in-out;
 
     &:hover {
-      box-shadow: 0 0 0 1px $orange-900
+      box-shadow: 0 0 0 1px --orange900;
     }
   }
 
@@ -365,7 +366,7 @@
       text-shadow 0.4s;
 
     &:hover {
-      color: $orange-900;
+      color: var(--orange900);
       text-decoration-line: none;
     }
 
@@ -527,7 +528,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-color: $orange-900;
+      background-color: var(--orange900);
       padding: 5px 28px;
       border-radius: 20px;
       transition: all 0.5s;
@@ -657,7 +658,7 @@
   bottom: 5px;
   cursor: pointer;
   left: 39%;
-  color: $orange-900;
+  color: var(--orange900);
   z-index: 900;
 
 
@@ -780,7 +781,7 @@
 
   &__name {
     padding: 0 40px;
-    color: $orange-900;
+    color: var(--orange900);
     margin-bottom: 15px;
     font-weight: 500;
   }
@@ -915,7 +916,7 @@
       }
 
       &:hover {
-        color: $orange-900;
+        color: var(--orange900);
       }
     }
 
@@ -926,7 +927,7 @@
       @include line-clamp(1);
 
       &:hover {
-        color: $orange-900;
+        color: var(--orange900);
       }
     }
 
