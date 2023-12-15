@@ -5,17 +5,15 @@ const concat = require("gulp-concat");
 const uglify = require("gulp-uglify-es").default;
 const imagemin = require("gulp-imagemin");
 const del = require("del");
-const cheerio = require("gulp-cheerio");
-const replace = require("gulp-replace");
 const browserSync = require("browser-sync").create();
 const autoprefixer = require("gulp-autoprefixer");
 const clean = require("gulp-clean");
-const rename = require("gulp-rename");
 
 function scripts() {
   return src([
     "node_modules/jquery/dist/jquery.js",
-    "node_modules/slick-carousel/slick/slick.js",
+    "node_modules/swiper/swiper-bundle.js",
+    "node_modules/mixitup/dist/mixitup.js",
     "app/js/main.js",
   ])
     .pipe(concat("main.min.js"))
@@ -27,26 +25,15 @@ function scripts() {
 function svgSprites() {
   return src("app/images/ico/*.svg")
     .pipe(
-      cheerio({
-        run: ($) => {
-          $("[fill]").removeAttr("fill");
-          $("[stroke]").removeAttr("stroke");
-          $("[style]").removeAttr("style");
-        },
-        parserOptions: { xmlMode: true },
-      })
-    )
-    .pipe(replace("&gt;", ">")) // боремся с заменой символа
-    .pipe(
       svgSprite({
         mode: {
           stack: {
-            sprite: "../sprite.svg",
+            sprite: "sprite.svg",
           },
         },
       })
     )
-    .pipe(dest("app/images"));
+    .pipe(dest("../app/images"));
 }
 
 function styles() {

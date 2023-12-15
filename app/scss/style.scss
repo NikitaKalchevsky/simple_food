@@ -24,7 +24,7 @@
 
 }
 
-.header_mini.header__container {
+.header-menu.header__container {
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -82,7 +82,8 @@
     border: 1px solid transparent;
     border-radius: 5px;
     transition: color 0.4s,
-      text-shadow 0.4s, ease-in-out;
+      text-shadow 0.4s,
+      border-color 0.4s ease-in-out;
 
     &:hover {
       color: $orange-900;
@@ -120,7 +121,7 @@
       color 0.4s,
       outline-color 0.4s ease-in-out;
 
-    &--img {
+    &-img {
       fill: none;
       stroke: #363853;
       stroke-width: 1.5;
@@ -165,7 +166,7 @@
       }
     }
 
-    &--num {
+    &-num {
       position: absolute;
       padding: 0px 4px 0px 4px;
       border-radius: 50%;
@@ -181,7 +182,7 @@
 
 
 
-.content {
+.hero-content {
   padding-top: 160px;
   display: flex;
   justify-content: space-between;
@@ -242,7 +243,7 @@
   transition: all 0.4s;
 }
 
-.categories {
+.popular-categories {
   display: flex;
 
   flex-wrap: wrap;
@@ -306,7 +307,7 @@
 
 }
 
-.product {
+.product-burger {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 30px;
@@ -392,7 +393,6 @@
 
   &__photo {
     margin-right: 120px;
-
     max-width: 440px;
     height: 585px;
     width: 100%;
@@ -402,12 +402,20 @@
 }
 
 .features {
-
   max-width: 470px;
 
   &__title {
     margin-top: 67px;
     margin-bottom: 30px;
+  }
+
+  &-description {
+    color: $dark;
+    margin-bottom: 30px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+    opacity: 0.9;
   }
 
   &__item {
@@ -424,6 +432,7 @@
     font-size: 24px;
     font-weight: 400;
     line-height: 1.5;
+    display: flex;
 
     &:not(:last-child) {
       margin-bottom: 20px;
@@ -438,18 +447,22 @@
       background-size: cover;
       background-position: center;
       margin-right: 30px;
+
     }
 
     &--stopwatch::before {
       background-image: url("../images/sprite.svg#stopwatch_1");
+      filter: invert(56%) sepia(20%) saturate(6164%) hue-rotate(335deg) brightness(101%) contrast(101%);
     }
 
     &--delivery::before {
       background-image: url("../images/sprite.svg#delivery_1");
+      filter: invert(45%) sepia(78%) saturate(2706%) hue-rotate(192deg) brightness(100%) contrast(103%);
     }
 
     &--shop::before {
       background-image: url("../images/sprite.svg#shop_1");
+      filter: invert(43%) sepia(99%) saturate(7445%) hue-rotate(351deg) brightness(99%) contrast(102%);
     }
   }
 
@@ -473,7 +486,12 @@
   &__item {
     max-width: 370px;
     border-radius: 10px;
-    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.10);
+    transition: box-shadow 0.4s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 3px 15px 0 rgba(255, 104, 56, 0.50);
+    }
 
     &-img {
       margin-bottom: 15px;
@@ -561,55 +579,50 @@
   }
 }
 
-.myslider-prev {
-  width: 34px;
-  height: 34px;
-  position: absolute;
-  top: 350px;
-  left: calc(50% - 93px);
-}
 
-.myslider-next {
-  width: 34px;
-  height: 34px;
-  position: absolute;
-  top: 350px;
-  right: calc(50% - 93px);
-}
-
-.swiper {
+.swiper-slide {
   min-width: 0;
 }
 
-.swiper-button-next {
-  bottom: 30px;
-}
-
-.image-slider .swiper-button-next::after,
-.image-slider .swiper-button-prev::after {
-  font-size: 0;
-}
-
-.image-slider .swiper-pagination {
+.swiper-button-prev:after {
+  position: relative;
   bottom: 0;
 }
 
-.swiper-pagination-bullet {
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  background-color: $gray;
+.swiper-pagination-bullets {
+  margin-right: 15px;
+
+  span {
+    width: 15px;
+    height: 15px;
+    background-color: #C2C2C2;
+
+
+  }
 }
 
-.swiper-pagination-bullet-active {
+.swiper-pagination-bullets .swiper-pagination-bullet-active {
   background-color: $orange-900;
 }
 
-.swiper-button-next:after,
-.swiper-container-rtl,
-.swiper-button-prev:after {
-  content: "";
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin-right: 15px;
 }
+
+.swiper-button-prev,
+.swiper-button-next {}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: $orange-900;
+  font-size: 18px;
+  border: 2px solid $orange-900;
+  padding: 5px 10px;
+  border-radius: 50%;
+}
+
+
 
 .reviews {
   &__box {
@@ -684,77 +697,29 @@
   }
 }
 
-.slick-arrow {
-  display: flex;
-}
 
-.slick-dots {
-  display: flex;
-  justify-content: center;
-
-  li {
-    padding: 0 15px;
-
-    button {
-      padding: 0;
-      font-size: 0;
-      background-color: transparent;
-      border: 1px solid transparent;
-      position: relative;
-
-      &::before {
-        content: "";
-        position: absolute;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
-        background-color: $gray;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-    }
-
-    &.slick-active {
-      button {
-        border-color: $orange-900;
-
-        &::before {
-          background-color: $orange-900;
-        }
-      }
-    }
-  }
-}
 
 .connect {
   &__box {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
   }
 
   &-image {
-    background-image: url('../images/connect__app.jpg');
-    @include image-bg;
     max-width: 570px;
     width: 100%;
     height: 380px;
+    @include image-bg;
 
   }
 
   &__info {
     max-width: 538px;
-    margin-right: 62px;
-
-
-
-
+    margin-right: 30px;
   }
 
   &__title {
-
     margin-bottom: 45px;
   }
 
@@ -797,20 +762,20 @@
 
   &__btn {
     display: flex;
-    padding: 13px 38px;
+    padding: 13px 33px;
     font-size: 14px;
     font-weight: 500;
 
     svg {
       filter: $white-filter;
+      margin-right: 15px;
       width: 16px;
-      height: 16;
+      height: 16px;
     }
 
     &:hover {
 
       background: #fff;
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
 
       svg {
         filter: $orange-btn;
@@ -833,11 +798,7 @@
       }
     }
 
-    &--send {
-      width: 16px;
-      height: 16px;
-      margin-right: 15px;
-    }
+
   }
 
   &__items {
@@ -871,13 +832,14 @@
       }
     }
 
-    &--link {
-
+    &-link {
       font-size: 18px;
       transition: color 0.4s linear;
+      text-decoration-line: none;
 
       &:hover {
         color: $orange-900;
+
       }
     }
 
@@ -895,42 +857,71 @@
   }
 }
 
-.form {
+.form-subscribe {
+
   &__label {
     display: flex;
     flex-direction: column;
+
+
   }
 
   &__input {
-    min-width: 200px;
+    max-width: 200px;
     width: 100%;
     padding: 13px 15px;
     color: $gray;
     border-radius: 5px;
+
     border: 1px solid $gray;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.3;
     margin-bottom: 12px;
+    transition: color 0.4s, box-shadow 0.4s ease-in-out;
+
+    &:hover::placeholder {
+      color: $title-color;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+    }
   }
 }
+
+
 
 .social {
   &-adress {
     margin-bottom: 15px;
-  }
 
-  &-contact:not(:last-child) {
-    margin-bottom: 15px;
-  }
+    &-link {
+      font-size: 16px;
+      text-decoration-line: none;
 
-  &-link {
-    font-size: 16px;
+    }
 
-    svg {
-      margin-right: 7px;
+    &__contact {
+      display: flex;
+
+      &-img {
+        fill: none;
+        stroke: #363853;
+        stroke-width: 1.5;
+        width: 20px;
+        height: 22px;
+        margin-right: 7px;
+      }
+
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
     }
   }
+
+
+
 
   &__item {
     &:not(:last-child) {
@@ -954,20 +945,30 @@
     justify-content: space-around;
     border: 2px solid transparent;
     transition: filter 0.4s,
-      background-color 0.4s;
+      background-color 0.4s ease-in-out;
 
+    svg {
+      width: 19px;
+      height: 19px;
+      filter: $dark-filter;
+      display: flex;
+    }
 
     &:hover {
       background-color: $orange-900;
 
       svg {
-        filter: $dark-filter;
+        filter: $white-filter;
       }
     }
 
     &:focus {
       background-color: $orange-400;
       border-color: $orange-900;
+
+      svg {
+        filter: $dark-filter;
+      }
     }
 
     &:active {
@@ -979,14 +980,6 @@
 
       }
     }
-
-    &--img {
-      max-width: 19px;
-      height: 19px;
-      filter: $dark-filter;
-      display: flex;
-    }
-
 
   }
 }
