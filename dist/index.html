@@ -115,7 +115,7 @@
 
         <ul class="popular-categories">
           <li class="popular-categories__item">
-            <button class="popular-categories__btn" type="button" data-filter=".category-a">
+            <button class="popular-categories__btn" type="button" data-filter="all">
               <svg class="popular-categories__btn--img">
                 <use xlink:href="images/sprite.svg#burgerwhite"></use>
               </svg>
@@ -160,7 +160,7 @@
 
 
         <ul class="product-burger">
-          <li class="product-burger__items category-a">
+          <li class="product-burger__items category-b">
             <article class="product-burger-card">
               <img class="product-burger__img" src="images/burgers/1.jpg" alt="Чизбургер с листьями салата" width="140"
                 height="140">
@@ -175,7 +175,7 @@
               </button>
             </article>
           </li>
-          <li class="product-burger__items mix category-a">
+          <li class="product-burger__items mix category-b">
             <article class="product-burger-card">
               <img class="product-burger__img" src="images/burgers/2.jpg" alt="Бифбургер" width="140" height="140">
               <h3 class="product-burger__text">
@@ -207,7 +207,7 @@
               </button>
             </article>
           </li>
-          <li class="product-burger__items">
+          <li class="product-burger__items mix category-e">
             <article class="product-burger-card">
 
               <img class="product-burger__img" src="images/burgers/4.jpg" alt="Черный гамбургер" width="140"
@@ -223,7 +223,7 @@
               </button>
             </article>
           </li>
-          <li class="product-burger__items">
+          <li class="product-burger__items mix category-e">
             <article class="product-burger-card">
 
               <img class="product-burger__img" src="images/burgers/5.jpg" alt="Чикен бургер" width="140" height="140">
@@ -238,7 +238,7 @@
               </button>
             </article>
           </li>
-          <li class="product-burger__items">
+          <li class="product-burger__items mix category-b">
             <article class="product-burger-card">
 
               <img class="product-burger__img" src="images/burgers/6.jpg" alt="Чизбургер с листьями салата" width="140"
@@ -254,7 +254,7 @@
               </button>
             </article>
           </li>
-          <li class="product-burger__items">
+          <li class="product-burger__items mix category-c">
             <article class="product-burger-card">
 
               <img class="product-burger__img" src="images/burgers/7.jpg" alt=" Бифбургер" width="140" height="140">
@@ -269,7 +269,7 @@
               </button>
             </article>
           </li>
-          <li class="product-burger__items">
+          <li class="product-burger__items mix category-c">
             <article class="product-burger-card">
 
               <img class="product-burger__img" src="images/burgers/8.jpg" alt="Королевский чизбургер" width="140"
@@ -285,7 +285,7 @@
               </button>
             </article>
           </li>
-          <li class="product-burger__items">
+          <li class="product-burger__items mix category-e">
             <article class="product-burger-card">
 
               <img class="product-burger__img" src="images/burgers/9.jpg" alt="Черный гамбургер" width="140"
@@ -301,7 +301,7 @@
               </button>
             </article>
           </li>
-          <li class="product-burger__items">
+          <li class="product-burger__items mix category-e">
             <article class="product-burger-card">
 
               <img class="product-burger__img" src="images/burgers/10.jpg" alt="Чикен бургер" width="140" height="140">
@@ -476,15 +476,12 @@
     </section>
 
 
-
-
-
     <section class="reviews section">
       <div class="container">
         <h2 class="title reviews__title">
           Отзывы клиентов
         </h2>
-        <div class="swiper">
+        <div class="reviews__slider swiper">
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
@@ -587,11 +584,21 @@
 
               </figure>
             </div>
+
           </div>
 
 
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          <div class="blog__button swiper-button-right">
+            <svg class="">
+              <use xlink:href="images/sprite.svg#vector"></use>
+            </svg>
+
+          </div>
+          <div class="blog__button swiper-button-left">
+            <svg class="">
+              <use xlink:href="images/sprite.svg#vector"></use>
+            </svg>
+          </div>
           <div class="swiper-pagination"></div>
 
 

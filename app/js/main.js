@@ -9,14 +9,19 @@ window.addEventListener("scroll", function () {
 });
 new Swiper(".swiper", {
   direction: "horizontal",
+  speed: 700,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: ".swiper-button-right",
+    prevEl: ".swiper-button-left",
+    // clickable: true,
   },
 
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+  },
+  keyboard: {
+    enabled: true,
   },
 });
 

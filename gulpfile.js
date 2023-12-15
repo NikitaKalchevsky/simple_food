@@ -3,6 +3,8 @@ const svgSprite = require("gulp-svg-sprite");
 const scss = require("gulp-sass")(require("sass"));
 const concat = require("gulp-concat");
 const uglify = require("gulp-uglify-es").default;
+const cheerio = require("gulp-cheerio");
+const replace = require("gulp-replace");
 const imagemin = require("gulp-imagemin");
 const del = require("del");
 const browserSync = require("browser-sync").create();
@@ -25,15 +27,26 @@ function scripts() {
 function svgSprites() {
   return src("app/images/ico/*.svg")
     .pipe(
+      cheerio({
+        run: ($) => {
+          $("[fill]").removeAttr("fill");
+          $("[stroke]").removeAttr("stroke");
+          $("[style]").removeAttr("style");
+        },
+        parserOptions: { xmlMode: true },
+      })
+    )
+    .pipe(replace("&gt;", ">"))
+    .pipe(
       svgSprite({
         mode: {
           stack: {
-            sprite: "sprite.svg",
+            sprite: "../sprite.svg",
           },
         },
       })
     )
-    .pipe(dest("../app/images"));
+    .pipe(dest("app/images"));
 }
 
 function styles() {
@@ -78,7 +91,7 @@ function watching() {
     notify: false,
   });
   watch(["app/scss/**/*.scss"], styles);
-  watch(["app/images/icons/*.svg"], svgSprites);
+  watch(["app/images/ico/*.svg"], svgSprites);
   watch(["app/js/**/*.js", "!app/js/main.min.js"], scripts);
   watch(["app/**/*.html"]).on("change", browserSync.reload);
 }

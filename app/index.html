@@ -12,7 +12,6 @@
   <link rel="manifest" href="/site.webmanifest">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-
   <link rel="stylesheet" href="css/style.min.css">
 
 </head>
@@ -20,7 +19,6 @@
 <body>
   <header class="header">
     <div class="container">
-
       <div class="header__container" id="navbar">
         <nav class="menu">
           <a class="logo" href="#">
@@ -116,7 +114,7 @@
         <ul class="popular-categories">
           <li class="popular-categories__item">
             <button class="popular-categories__btn" type="button" data-filter="all">
-              <svg class="popular-categories__btn--img">
+              <svg class="popular-categories__btn-img">
                 <use xlink:href="images/sprite.svg#burgerwhite"></use>
               </svg>
               Бургеры
@@ -125,7 +123,7 @@
 
           <li class="popular-categories__item">
             <button class="popular-categories__btn" type="button" data-filter=".category-b">
-              <svg class="popular-categories__btn--img">
+              <svg class="popular-categories__btn-img">
                 <use xlink:href="images/sprite.svg#pizza"></use>
               </svg>
               Пицца
@@ -134,7 +132,7 @@
 
           <li class="popular-categories__item">
             <button class="popular-categories__btn" type="button" data-filter=".category-c">
-              <svg class="popular-categories__btn--img">
+              <svg class="popular-categories__btn-img">
                 <use xlink:href="images/sprite.svg#sandwich_1"></use>
               </svg>
               Сендвичи
@@ -142,7 +140,7 @@
           </li>
           <li class="popular-categories__item">
             <button class="popular-categories__btn" type="button" data-filter=".category-d">
-              <svg class="popular-categories__btn--img">
+              <svg class="popular-categories__btn-img">
                 <use xlink:href="images/sprite.svg#christmasdinner"></use>
               </svg>
               Азиатская кухня
@@ -150,7 +148,7 @@
           </li>
           <li class="popular-categories__item">
             <button class="popular-categories__btn" type="button" data-filter=".category-e">
-              <svg class="popular-categories__btn--img">
+              <svg class="popular-categories__btn-img">
                 <use xlink:href="images/sprite.svg#dish"></use>
               </svg>
               Cеты
@@ -481,7 +479,7 @@
         <h2 class="title reviews__title">
           Отзывы клиентов
         </h2>
-        <div class="swiper">
+        <div class="reviews__slider swiper">
           <div class="swiper-wrapper">
 
             <div class="swiper-slide">
@@ -584,14 +582,21 @@
 
               </figure>
             </div>
+
           </div>
 
+          <div class="blog__button swiper-button-right">
+            <svg class="">
+              <use xlink:href="images/sprite.svg#vector"></use>
+            </svg>
 
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
+          </div>
+          <div class="blog__button swiper-button-left">
+            <svg class="">
+              <use xlink:href="images/sprite.svg#vector"></use>
+            </svg>
+          </div>
           <div class="swiper-pagination"></div>
-
-
 
         </div>
 
@@ -726,7 +731,7 @@
           <ul class="social__items">
             <li class="social__item">
               <a class="social__link" href="#" target="_blank">
-                <svg class="social__link--img">
+                <svg class="social__link-img">
                   <use xlink:href="images/sprite.svg#facebook"></use>
                 </svg>
                 <span class="sr-only">
@@ -736,7 +741,7 @@
             </li>
             <li class="social__item">
               <a class="social__link" href="#" target="_blank">
-                <svg class="social__link--img">
+                <svg class="social__link-img">
                   <use xlink:href="images/sprite.svg#twitter"></use>
                 </svg>
                 <span class="sr-only">
@@ -746,7 +751,7 @@
             </li>
             <li class="social__item">
               <a class="social__link" href="#" target="_blank">
-                <svg class="social__link--img">
+                <svg class="social__link-img">
                   <use xlink:href="images/sprite.svg#instagram"></use>
                 </svg>
                 <span class="sr-only">
