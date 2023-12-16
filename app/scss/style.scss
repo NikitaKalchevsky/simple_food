@@ -31,7 +31,7 @@
   border: 2px solid transparent;
   border-radius: 5px;
   transition: opacity 0.4s,
-    border-color 0.4s ease-in-out;
+    box-shadow 0.4s ease-in-out;
 
   &:hover {
     opacity: 0.8;
@@ -39,7 +39,7 @@
   }
 
   &:focus {
-    border-color: var(--orange900);
+    box-shadow: var(--box-shadow-btn);
   }
 
   &:active {
@@ -78,14 +78,14 @@
     border-radius: 5px;
     transition: color 0.4s,
       text-shadow 0.4s,
-      border-color 0.4s ease-in-out;
+      box-shadow 0.4s ease-in-out;
 
     &:hover {
       color: $orange-900;
     }
 
     &:focus {
-      border-color: $orange-900;
+      box-shadow: var(--box-shadow-btn);
     }
 
     &:active {
@@ -115,14 +115,6 @@
     transition: background-color 0.4s,
       color 0.4s,
       outline-color 0.4s ease-in-out;
-
-    &-img {
-      fill: none;
-      stroke: #363853;
-      stroke-width: 1.5;
-      width: 18px;
-      height: 18px;
-    }
 
     &:hover {
       background-color: var(--orange900);
@@ -160,20 +152,29 @@
         color: $white;
       }
     }
+  }
 
-    &-num {
-      position: absolute;
-      padding: 0px 4px 0px 4px;
-      border-radius: 50%;
-      background-color: var(--orange900);
-      color: $white;
-      font-size: 10px;
-      line-height: 15px;
-      top: 9px;
-      right: 4px;
-    }
+  &__link-img {
+    fill: none;
+    stroke: #363853;
+    stroke-width: 1.5;
+    width: 18px;
+    height: 18px;
+  }
+
+  &__link-num {
+    position: absolute;
+    padding: 0px 4px 0px 4px;
+    border-radius: 50%;
+    background-color: var(--orange900);
+    color: $white;
+    font-size: 10px;
+    line-height: 15px;
+    top: 9px;
+    right: 4px;
   }
 }
+
 
 .hero-content {
   padding-top: 160px;
@@ -271,17 +272,15 @@
     &:active {
       box-shadow: 0 -5px 12px 0 rgba(255, 104, 56, 0.2) inset;
     }
+  }
 
+  &__btn-img {
+    margin-right: 10px;
+    width: 44px;
+    height: 44px;
 
-
-    &-img {
-      margin-right: 10px;
-      width: 44px;
-      height: 44px;
-
-      &:hover {
-        filter: $orange-btn;
-      }
+    &:hover {
+      filter: $orange-btn;
     }
   }
 
@@ -946,7 +945,6 @@
   &__label {
     display: flex;
     flex-direction: column;
-
   }
 
   &__input {
@@ -1056,7 +1054,6 @@
 
       svg {
         filter: $orange-btn;
-
       }
     }
   }
