@@ -95,6 +95,12 @@ button {
 :root {
   --orange900: #ff6838;
   --default-color: #31352b;
+  --box-shadow-orange: 0 0 0 2px rgba(255, 104, 56, 0.7);
+}
+
+.restaurants {
+  --box-shadow-btn: 0 0 0 2px rgba(255, 104, 56, 0.7),
+    0 5px 12px 0 rgba(255, 104, 56, 0.2);
 }
 
 .title, body {
@@ -1287,14 +1293,14 @@ body {
 }
 .popular-categories__btn:hover {
   background-color: rgba(255, 122, 80, 0.1);
-  box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+  box-shadow: var(--box-shadow-orange);
   color: var(--orange900);
 }
 .popular-categories__btn:hover svg {
   filter: invert(61%) sepia(34%) saturate(6424%) hue-rotate(336deg) brightness(100%) contrast(104%);
 }
 .popular-categories__btn:focus {
-  box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+  box-shadow: var(--box-shadow-orange);
 }
 .popular-categories__btn:active {
   box-shadow: 0 -5px 12px 0 rgba(255, 104, 56, 0.2) inset;
@@ -1516,7 +1522,7 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-.restaurants__item-go {
+.restaurants__item-btn {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1525,7 +1531,7 @@ body {
   border-radius: 20px;
   transition: all 0.5s;
 }
-.restaurants__item-go::before {
+.restaurants__item-btn::before {
   content: "";
   width: 24px;
   height: 24px;
@@ -1534,25 +1540,25 @@ body {
   border-radius: 20px;
   transition: transform 0.4s, filter 0.4s;
 }
-.restaurants__item-go:hover::before {
+.restaurants__item-btn:hover::before {
   filter: invert(61%) sepia(34%) saturate(6424%) hue-rotate(336deg) brightness(100%) contrast(104%);
   transform: translateX(25px);
 }
-.restaurants__item-go:focus::before {
+.restaurants__item-btn:focus::before {
   filter: invert(61%) sepia(34%) saturate(6424%) hue-rotate(336deg) brightness(100%) contrast(104%);
 }
-.restaurants__item-go:active::before {
+.restaurants__item-btn:active::before {
   filter: invert(61%) sepia(34%) saturate(6424%) hue-rotate(336deg) brightness(100%) contrast(104%);
 }
-.restaurants__item-go:hover {
+.restaurants__item-btn:hover {
   background-color: #ffffff;
-  box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7), 0 5px 12px 0 rgba(255, 104, 56, 0.2);
+  box-shadow: var(--box-shadow-btn);
 }
-.restaurants__item-go:focus {
+.restaurants__item-btn:focus {
   background-color: #fff2ed;
-  box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7), 0 5px 12px 0 rgba(255, 104, 56, 0.2);
+  box-shadow: var(--box-shadow-btn);
 }
-.restaurants__item-go:active {
+.restaurants__item-btn:active {
   background-color: #fff2ed;
 }
 
@@ -1886,7 +1892,7 @@ body {
   color: #363853;
 }
 .form-subscribe__input:focus {
-  box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+  box-shadow: var(--box-shadow-orange);
 }
 
 .social-adress {

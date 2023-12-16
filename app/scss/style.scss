@@ -256,7 +256,7 @@
 
     &:hover {
       background-color: rgba(255, 122, 80, 0.1);
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      box-shadow: var(--box-shadow-orange);
       color: var(--orange900);
 
       svg {
@@ -265,11 +265,10 @@
     }
 
     &:focus {
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      box-shadow: var(--box-shadow-orange);
     }
 
     &:active {
-
       box-shadow: 0 -5px 12px 0 rgba(255, 104, 56, 0.2) inset;
     }
 
@@ -524,7 +523,7 @@
     }
 
 
-    &-go {
+    &-btn {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -559,14 +558,12 @@
 
       &:hover {
         background-color: $white;
-        box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7),
-          0 5px 12px 0 rgba(255, 104, 56, 0.2);
+        box-shadow: var(--box-shadow-btn);
       }
 
       &:focus {
         background-color: $orange-400;
-        box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7),
-          0 5px 12px 0 rgba(255, 104, 56, 0.2);
+        box-shadow: var(--box-shadow-btn);
       }
 
       &:active {
@@ -970,7 +967,7 @@
     }
 
     &:focus {
-      box-shadow: 0 0 0 2px rgba(255, 104, 56, 0.7);
+      box-shadow: var(--box-shadow-orange);
     }
   }
 }
