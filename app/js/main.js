@@ -24,5 +24,11 @@ new Swiper(".swiper", {
     enabled: true,
   },
 });
+document.addEventListener("DOMContentLoaded", () => {
+  const burger = document.querySelector(".burger");
 
-var mixer = mixitup(".product-burger");
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("burger--active");
+  });
+});
+var mixer = mixitup(".popular-category__list");

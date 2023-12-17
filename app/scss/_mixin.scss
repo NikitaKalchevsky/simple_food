@@ -10,6 +10,14 @@
   align-items: center;
 }
 
+@mixin flex-space-betwen {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
 @mixin pseudo($display: block, $pos: absolute, $content: '') {
   content: $content;
   display: $display;
@@ -17,11 +25,7 @@
 }
 
 // Использование миксина без аргументов
-.class::after {
-  @include pseudo;
-  width: 30px;
-  height: 30px;
-}
+
 
 $breakpoints: ("phone": 560px,
   "tablet": 768px,
@@ -43,9 +47,6 @@ $breakpoints: ("phone": 560px,
 }
 
 
-@include mq('768') {
-  padding: 15px;
-}
 
 // обрезание текста
 @mixin line-clamp($lines: 1) {
